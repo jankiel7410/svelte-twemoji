@@ -4,8 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c -f umd --environment NODE_ENV:production",
+
+    "build": "rollup -c --environment NODE_ENV:production # && tsc -d --emitDeclarationOnly --declarationDir dist",
     "test": "jest src --coverage",
     "test:watch": "npm run test -- --watch"
   },
