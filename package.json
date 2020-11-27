@@ -11,7 +11,7 @@
     "test": "jest src --coverage",
     "test:watch": "npm run test -- --watch"
   },
-  "keywords": [],
+  "keywords": ["twemoji", "emoji", "DOM", "parser", "images", "retina", "Twitter", "unicode"],
   "author": "jankiel7410",
   "license": "MIT",
   "devDependencies": {

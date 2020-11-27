@@ -1,6 +1,8 @@
+coverage/
 node_modules/
 src/
 .gitignore
 .babelrc
+tsconfig.json
 rollup.config.js
 svelte.config.js
