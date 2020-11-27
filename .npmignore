@@ -1,0 +1,6 @@
+node_modules/
+src/
+.gitignore
+.babelrc
+rollup.config.js
+svelte.config.js

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "declarationDir": "./dist",
+        "declaration": true,
+        "lib": ["ES5", "ES6", "DOM"],
+        "module": "CommonJS",
+        "noImplicitAny": true,
+        "preserveConstEnums": true,
+        "baseUrl": "./src",
+        "rootDir": "./src",
+        "target": "es6"
+    },
+    "files": ["./src/index.ts"],
+
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.test.ts"]
+}
