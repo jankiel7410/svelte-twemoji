@@ -1,12 +1,13 @@
 {
   "name": "svelte-twemoji",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["dist/"],
   "scripts": {
-    "build": "rollup -c --environment NODE_ENV:production # && tsc -d --emitDeclarationOnly --declarationDir dist",
+    "build": "tsc src/index.ts --outDir dist -d",
     "test": "jest --coverage",
     "test:watch": "npm run test -- --watch"
   },
