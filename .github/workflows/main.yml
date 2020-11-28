@@ -53,7 +53,7 @@ jobs:
           npm run build
       - id: publish
         with:
-          - token: ${{secrets.NPM_PUBLISH_KEY}}
+          token: ${{secrets.NPM_PUBLISH_KEY}}
         uses: JS-DevTools/npm-publish@v1
       - if: steps.publish.outputs.type != 'none'
         run: |
