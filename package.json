@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c --environment NODE_ENV:production # && tsc -d --emitDeclarationOnly --declarationDir dist",
-    "test": "jest src --coverage",
+    "test": "jest --coverage",
     "test:watch": "npm run test -- --watch"
   },
   "keywords": [
@@ -50,8 +50,7 @@
           "preprocess": true
         }
       ],
-      "^.+\\.ts$": "ts-jest",
-      "^.+\\.js$": "ts-jest"
+      "^.+\\.ts$": "ts-jest"
     },
     "moduleFileExtensions": [
       "js",

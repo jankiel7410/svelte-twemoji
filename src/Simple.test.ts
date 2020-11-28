@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect'
 import { render, screen } from '@testing-library/svelte'
 
 import Component from './Simple.svelte'
-import { twemoji } from '.'
+import { twemoji } from './index'
 
 test('shows proper text when rendered', () => {
   const { getByText } = render(Component, {})

@@ -17,4 +17,4 @@ function twemoji(node: HTMLElement, how: TwemojiHow = {}) {
 }
 
 
-export {twemoji};
+export { twemoji };

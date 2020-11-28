@@ -1,5 +1,5 @@
-<script lang='ts'>
-    import {twemoji} from '.'
+<script >
+    import { twemoji } from '.'
     export let className = 'emoji-class'
     $: how = { className }
 </script>
