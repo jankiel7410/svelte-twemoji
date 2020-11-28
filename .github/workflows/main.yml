@@ -45,13 +45,13 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node_version: '14.x'
-      - id: install 
+      - name: install 
           run: |
             npm ci
-      - id: build
+      - name: build
           run: |
             npm run build
-      - id: setup-npmrc
+      - name: setup npmrc
           run: |
             echo _auth=${secrets.NPM_PUBLISH_KEY} >> .npmrc
             echo email=${secrets.NPM_EMAIL} >> .npmrc
