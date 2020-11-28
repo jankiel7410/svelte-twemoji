@@ -53,5 +53,5 @@ jobs:
           npm ci
           npm run build
           # npm version --no-git-tag-version $(npm view svelte-twemoji@latest version)
-          npm version --no-git-tag-version prerelease
+          # npm version --no-git-tag-version prerelease
           npm publish
