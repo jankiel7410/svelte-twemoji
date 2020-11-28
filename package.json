@@ -6,12 +6,20 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-
     "build": "rollup -c --environment NODE_ENV:production # && tsc -d --emitDeclarationOnly --declarationDir dist",
     "test": "jest src --coverage",
     "test:watch": "npm run test -- --watch"
   },
-  "keywords": ["twemoji", "emoji", "DOM", "parser", "images", "retina", "Twitter", "unicode"],
+  "keywords": [
+    "twemoji",
+    "emoji",
+    "DOM",
+    "parser",
+    "images",
+    "retina",
+    "Twitter",
+    "unicode"
+  ],
   "author": "jankiel7410",
   "license": "MIT",
   "devDependencies": {
@@ -27,15 +35,12 @@
     "jest": "^26.6.3",
     "rollup": "^2.33.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "svelte": "*",
+    "svelte": "^3.30.0",
     "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.6.1",
     "ts-jest": "^26.4.4",
+    "twemoji": "^13.0.1",
     "typescript": "^4.1.2"
-  },
-  "peerDependencies": {
-    "svelte": "^3.30.0",
-    "twemoji": "^13.0.1"
   },
   "jest": {
     "transform": {
