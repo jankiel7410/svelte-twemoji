@@ -12,7 +12,7 @@ export default {
             format: 'cjs',
             dir: 'dist',
             name: 'Name',
-            exports: 'named',
+            exports: 'default',
             globals: {
                 'twemoji': 'twemoji',
                 'svelte': 'svelte',

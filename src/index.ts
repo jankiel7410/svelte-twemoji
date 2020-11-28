@@ -4,7 +4,7 @@ import { afterUpdate } from 'svelte'
 type TwemojiHow = Partial<ParseObject> | ParseCallback;
 
 
-function twemoji(node: HTMLElement, how: TwemojiHow = {}) {
+export function twemoji(node: HTMLElement, how: TwemojiHow = {}) {
     parse(node, how)
     afterUpdate(() => {
         parse(node, how)
@@ -15,6 +15,3 @@ function twemoji(node: HTMLElement, how: TwemojiHow = {}) {
         }
 	}
 }
-
-
-export { twemoji };
