@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Setup Node
-        uses: actions/setup-node@2
+        uses: actions/setup-node@v2.1.2
         with:
           node-version: '10.x'
       - name: Test
@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@2
       - name: Setup Node
-        uses: actions/setup-node@2
+        uses: actions/setup-node@v2.1.2
         with:
           node_version: '10.x'
       - name: Setup .npmrc
