@@ -45,13 +45,18 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node_version: '14.x'
-      - name: Setup .npmrc
+      - id: install 
+          run: npm ci
+      - id: build
+          run: npm run build
+      - id: setup-npmrc
+          run: |
+            echo _auth=${secrets.NPM_PUBLISH_KEY} >> .npmrc
+            echo email=${secrets.NPM_EMAIL} >> .npmrc
+            echo always-auth=true >> .npmrc
+          
+      - id: publish
+        uses: JS-DevTools/npm-publish@v1
+      - if: steps.publish.outputs.type != 'none'
         run: |
-          echo _auth=${NPM_PUBLISH_KEY} >> .npmrc
-          echo email=${NPM_EMAIL} >> .npmrc
-          echo always-auth=true >> .npmrc
-          npm ci
-          npm run build
-          # npm version --no-git-tag-version $(npm view svelte-twemoji@latest version)
-          # npm version --no-git-tag-version prerelease
-          npm publish
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
